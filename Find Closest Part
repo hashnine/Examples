@@ -1,0 +1,29 @@
+-- Set the name of the part you want to find
+local partName = "PartName"
+
+-- Get the LocalPlayer's character
+local character = game:GetService("Players").LocalPlayer.Character
+
+-- Get all parts in the game
+local parts = game:GetService("Workspace"):GetDescendants()
+
+-- Set a variable to keep track of the closest part found so far
+local closestPart = nil
+local closestDistance = math.huge
+
+-- Loop through all the parts in the game
+for _, part in ipairs(parts) do
+    -- Check if the part's name matches the name we're looking for
+    if part.Name == partName then
+        -- Calculate the distance between the LocalPlayer's character and the part
+        local distance = (part.Position - character.HumanoidRootPart.Position).magnitude
+        -- If this part is closer than the previous closest part, update the variables
+        if distance < closestDistance then
+            closestPart = part
+            closestDistance = distance
+        end
+    end
+end
+
+-- Now the variable closestPart contains the closest part with the specified name
+print("The closest part is:", closestPart)
