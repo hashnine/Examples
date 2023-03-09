@@ -1,0 +1,56 @@
+local UI = {}
+
+-- define default settings
+UI.Settings = {
+    ToggleKeybind = Enum.KeyCode.Tab,
+    BackgroundColor = Color3.fromRGB(255, 255, 255),
+}
+
+-- define UI elements
+function UI.CreateTitle(text, parent)
+    -- create and return a title UI element
+end
+
+function UI.CreateTab(text, parent)
+    -- create and return a tab UI element
+end
+
+function UI.CreateSection(text, parent)
+    -- create and return a section UI element
+end
+
+function UI.CreateToggle(text, default, callback, parent)
+    -- create and return a toggle UI element
+end
+
+function UI.CreateButton(text, callback, parent)
+    -- create and return a button UI element
+end
+
+function UI.CreateSlider(text, min, max, default, callback, parent)
+    -- create and return a slider UI element that can do decimal numbers
+end
+
+function UI.CreateTextbox(text, default, callback, parent)
+    -- create and return a textbox UI element
+end
+
+function UI.CreateCloseButton(callback, parent)
+    -- create and return a close button UI element
+end
+
+-- define UI functions
+function UI.Toggle()
+    -- toggle the UI on and off with the toggle keybind
+end
+
+function UI.SetToggleKeybind(keybind)
+    -- set the toggle keybind to the given keybind
+end
+
+function UI.SetBackgroundColor(color)
+    -- set the background color of the UI to the given color
+end
+
+-- return the UI library
+return UI
