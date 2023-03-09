@@ -1,0 +1,25 @@
+local UI = loadstring(game:HttpGet("PASTEBIN_LINK"))()
+
+-- create UI elements
+local title = UI.CreateTitle("My UI Library", script.Parent)
+local tab1 = UI.CreateTab("Tab 1", script.Parent)
+local section1 = UI.CreateSection("Section 1", tab1)
+local toggle1 = UI.CreateToggle("Toggle 1", false, function(enabled)
+    print("Toggle 1 enabled:", enabled)
+end, section1)
+local button1 = UI.CreateButton("Button 1", function()
+    print("Button 1 clicked!")
+end, section1)
+local slider1 = UI.CreateSlider("Slider 1", 0, 1, 0.5, function(value)
+    print("Slider 1 value:", value)
+end, section1)
+local textbox1 = UI.CreateTextbox("Textbox 1", "Default text", function(text)
+    print("Textbox 1 text:", text)
+end, section1)
+local closeBtn = UI.CreateCloseButton(function()
+    UI.Toggle()
+end, script.Parent)
+
+-- set UI settings
+UI.SetToggleKeybind(Enum.KeyCode.Q)
+UI.SetBackgroundColor(Color3.fromRGB(100, 100, 100))
