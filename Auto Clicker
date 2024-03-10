@@ -1,11 +1,22 @@
+--// Features Cotainer
+
+--[[
+	[+] Keybinds
+	[+] Togglable
+	[+] Lock Mouse Position
+	[+] Right Click Support
+	[+] Visual GUI
+	[+] Delay
+]]
+
 --// Settings Cotainer
 
 getgenv().Settings = {
-    ["Auto Click Keybind"] = "V", -- Use an UpperCase letter or KeyCode Enum. Ex: Enum.KeyCode.Semicolon
+    ["Auto Click Keybind"] = "V", 
     ["Lock Mouse Position Keybind"] = "B",
     ["Right Click"] = false,
-    ["GUI"] = false, -- A drawing gui that tells you what is going on with the autoclicker.
-    ["Delay"] = 9 -- 0 for RenderStepped, other numbers go to regular wait timings.
+    ["GUI"] = false, 
+    ["Delay"] = 9 
 }
 
 --// Script Cotainer
